@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title> Session Management Sample </title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="/css/main.css" th:href="@{/css/main.css}" />
+	</head>
+	
+    <body>
+        <h1> Session Management Sample </h1>
+
+			<p><a href="/scopedproxy/form" role="button">Session Scoped Proxy Example</a></p>
+			<p><a href="/sessionattributes/form" role="button">Session Attributes Example</a></p>
+        
+        <p><a href="/" th:href="@{/}">Back to home page</a></p>
+    </body>
+</html>

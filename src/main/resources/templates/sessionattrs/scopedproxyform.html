@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title> Session Management Sample </title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="/css/main.css" th:href="@{/css/main.css}" />
+	</head>
+	
+    <body>
+ 		<h3>Scoped Proxy Example</h3>
+ 		<h5>Enter a TODO</h5>
+ 		
+        
+        <form action="#" th:action="@{/scopedproxy/form}" th:object="${todo}" method="post">
+                 		<input type="text" th:field="*{description}" class="form-control" placeholder="TODO" required autofocus/>
+             			<button type="submit" style="max-width: 80px;">Create</button>
+                 		
+        </form>
+        <p><a href="/" th:href="@{/}">Back to home page</a></p>
+
+    </body>
+</html>
+

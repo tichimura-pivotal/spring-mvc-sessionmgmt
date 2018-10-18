@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title> Session Management Sample </title>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="/css/main.css" th:href="@{/css/main.css}" />
+	</head>
+	
+    <body>
+ 		<h1>Scoped Proxy Example</h1>
+    
+        <p><a th:href="@{/scopedproxy/form}" class="btn btn-sm btn-primary btn-block" role="button" 
+										style="width: 10em;">Add New</a><p>
+        	<br/>
+        	<h5>TODO List</h5>
+						<table>
+							<tbody>
+								<tr>
+									<th width="60%"> ToDo Description</th>
+									<th width="40%" > Registered Date</th>
+								</tr>
+								<tr th:each="todo : ${todos}">
+									<td th:text="${todo.description}">Description</td>
+									<td th:text="${#temporals.format(todo.createDate, 'yyyy-MM-dd HH:mm:ss')}"> Registered Date</td>
+								</tr>
+							</tbody>
+						</table>
+    </body>
+</html>
